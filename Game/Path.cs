@@ -1,0 +1,7 @@
+﻿namespace TreehouseDefence
+{
+    class Path
+    {
+
+    }
+}
