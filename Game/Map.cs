@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace TreehouseDefence
+namespace TreehouseDefense
 {
     class Map
     {
@@ -15,8 +15,8 @@ namespace TreehouseDefence
 
         public bool OnMap(Point point)
         {
-            bool inBounds = point.X >= 0 && point.X < Width && point.Y >= 0 && point.Y < Height;
-            return inBounds;
+            return point.X >= 0 && point.X < Width && 
+                   point.Y >= 0 && point.Y < Height;
         }
     }
 }

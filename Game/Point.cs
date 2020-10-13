@@ -1,4 +1,6 @@
-﻿namespace TreehouseDefense
+﻿using System;
+
+namespace TreehouseDefense
 {
     class Point
     {
@@ -9,6 +11,17 @@
         {
             X = x;
             Y = y;
+        }
+
+        public int DistanceTo(int x, int y)
+        {
+            int xDiff = X - x;
+            int yDiff = Y - y;
+
+            int xDiffSquared = xDiff * xDiff;
+            int yDiffSquared = yDiff * yDiff;
+
+            return (int)Math.Sqrt(xDiffSquared + yDiffSquared);
         }
     }
 }
