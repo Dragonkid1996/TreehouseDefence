@@ -8,11 +8,9 @@ namespace Game
         static void Main(string[] args)
         {
             Tower tower = new Tower();
-            Map map = new Map();
-            map.width = 8;
-            map.height = 5;
+            Map map = new Map(8, 5);
 
-            int area = map.width * map.height;
+            int area = map.Width * map.Height;
         }
     }
 }
