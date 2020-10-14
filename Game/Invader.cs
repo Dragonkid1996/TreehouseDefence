@@ -1,9 +1,9 @@
 ﻿namespace TreehouseDefense
 {
-    class Invader
+    abstract class Invader : IInvader
     {
         private readonly Path _path;
-        public virtual int Health { get; protected set; } = 2;
+        public abstract int Health { get; protected set; }
 
         protected virtual int StepSize { get; } = 1;
         public bool HasScored { get { return _pathStep >= _path.Length; } }

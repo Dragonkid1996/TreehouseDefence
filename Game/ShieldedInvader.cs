@@ -2,6 +2,7 @@
 {
     class ShieldedInvader : Invader
     {
+        public override int Health { get; protected set; } = 2;
         private static System.Random _random = new System.Random();
         public ShieldedInvader(Path path) : base(path)
         {
