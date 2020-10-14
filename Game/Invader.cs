@@ -1,12 +1,11 @@
-﻿using System.Dynamic;
-
-namespace TreehouseDefense
+﻿namespace TreehouseDefense
 {
     class Invader
     {
         private readonly Path _path;
-        public int Health { get; private set; } = 2;
+        public virtual int Health { get; protected set; } = 2;
 
+        protected virtual int StepSize { get; } = 1;
         public bool HasScored { get { return _pathStep >= _path.Length; } }
 
         public bool IsNeutralized => Health <= 0;
@@ -20,7 +19,7 @@ namespace TreehouseDefense
             _path = path;
         }
 
-        public void Move() => _pathStep += 1;
+        public void Move() => _pathStep += StepSize;
 
         public virtual void DecreaseHealth(int factor)
         {
