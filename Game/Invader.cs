@@ -22,6 +22,10 @@ namespace TreehouseDefense
 
         public void Move() => _pathStep += 1;
 
-        public void DecreaseHealth(int factor) => Health -= 1;
+        public virtual void DecreaseHealth(int factor)
+        {
+            System.Console.WriteLine("Shot at and hit an invader!");
+            Health -= 1;
+        }
     }
 }

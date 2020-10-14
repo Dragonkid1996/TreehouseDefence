@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using TreehouseDefense;
 
 namespace Game
@@ -27,9 +26,9 @@ namespace Game
                 Invader[] invaders =
                 {
                     new Invader(path),
+                    new ShieldedInvader(path),
                     new Invader(path),
-                    new Invader(path),
-                    new Invader(path)
+                    new ShieldedInvader(path)
                 };
 
                 Tower[] towers =
